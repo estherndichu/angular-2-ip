@@ -10,8 +10,8 @@ import { Repos } from "../repos";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  user : any = [Users]
-  repo : any = [Repos]
+  user : any = []
+  repo : any = []
   
 
 
