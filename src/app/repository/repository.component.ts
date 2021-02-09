@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from "../user-http/user-service.service";
+import { Repos } from "../repos";
+
+
 
 @Component({
   selector: 'app-repository',
@@ -6,10 +10,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repository.component.css']
 })
 export class RepositoryComponent implements OnInit {
+  repo : any = [];
+  constructor(public repoService : UserServiceService) { }
 
-  constructor() { }
+  repoSearch(searchName: string){
+    this.repoService.getRepos(searchName).then(
+      (results) =>{
+        this.repo = this.repoService.allRepos
+        console.log(this.repo);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.repoSearch('estherndichu')
   }
 
 }

@@ -1,7 +1,25 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            
+<div class="container-fluid">
+    <app-user-form (searchOutput)="repoSearch($event)"></app-user-form>
+    <div class=" ">
+        <div class="container" id="repo">
+
+            <div class="card" *ngFor="let repo of repo " style="width: 22rem;" class="repo">
+                <div class="card-body">
+                    <h5 class="card-title">Repo Name: &nbsp;{{repo.name}} </h5>
+                    <div class="card-text">
+                        <hr>
+                        <div class="dec"><span class="display">Description:</span> &nbsp;{{repo.description}}
+                        </div>
+                        <hr>
+                        <div class="card-subtitle mb-2">
+                            <span class="display">Language: </span> {{repo.language}}
+                        </div>
+                        <div class="card-subtitle mb-2"><span class="display">Created On:</span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
-</div>
