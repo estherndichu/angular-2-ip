@@ -10,12 +10,14 @@ import { Repos } from "../repos";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  user : any = []
-  repo : any = []
+  user : any = [Users]
+  repo : any = [Repos]
   
 
 
-  constructor(public myService : UserServiceService, private repoService : UserServiceService) { }
+  constructor(public myService : UserServiceService, private repoService : UserServiceService) {
+    
+   }
 
   search(searchName: string){
     this.myService.searchUser(searchName).then(
@@ -37,7 +39,7 @@ export class UsersComponent implements OnInit {
       }
     );
   }
-  ngOnInit(): void {
+  ngOnInit() {
     this.search('estherndichu')
   }
 
