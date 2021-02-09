@@ -13,7 +13,7 @@ export class UserServiceService {
   foundUser!: Users;
   allRepos!: Repos;
 
-  constructor(public http:HttpClient) { 
+  constructor(private http:HttpClient) { 
     this.foundUser = new Users("","","","",0,0,0,"");
     this.allRepos = new Repos("","","",0,0,"");
   }
