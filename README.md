@@ -20,6 +20,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Angular CLI
 
 ## Live link
+https://estherndichu.github.io/angular-2-ip/
 
 ## Support and contact details
 For any queries or further clarification on the directions to use the application, contact via email:itskuijenga@gmail.com
