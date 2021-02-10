@@ -6,3 +6,9 @@
  #info{
      background-color: darkgray;
  }
+
+ #each{
+    background-color: dimgray;
+    margin: 5px;
+    width: 25%;
+}

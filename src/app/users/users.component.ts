@@ -11,6 +11,7 @@ import { Repos } from "../repos";
 })
 export class UsersComponent implements OnInit {
   user : any = [Users]
+  repo : any = [Repos]
   
 
 
@@ -28,6 +29,15 @@ export class UsersComponent implements OnInit {
         console.log(error)
       }
     )
+    this.repoService.getRepos(searchName).then(
+      (results) => {
+        this.repo =this.repoService.allRepos
+        console.log(this.repo);
+      },
+      (error) => {
+        console.log(error)
+      }
+    );
   }
   ngOnInit() {
     this.search('estherndichu')

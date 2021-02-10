@@ -1,3 +1,5 @@
+<div class="container-fluid">
+    <app-user-form (searchOutput)= "repoSearch($event)"></app-user-form>
 <div class="container" repos>
     <div class="row">
         <div class="card" *ngFor = 'let repo of repo' id="each">
