@@ -5,7 +5,8 @@
         <app-user-form (searchOutput)="search($event)"></app-user-form>
     </div>
 </div>
-<div class="container repos">
+<br>
+<div class="container ">
     <div class="row">
         <div class="col-sm-4">
             <div class="userimg">
@@ -17,7 +18,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-7 user">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-5 user">
             <div class="card-body ">
                 <h5>Github-Username -:
                     {{user.login}}
@@ -39,11 +41,12 @@
         </div>
     </div>
 </div>
-<div class="text-center repos" id="repo">
+<div class="text-center repos">
     <h3>User Repositories</h3>
-    <div class="container">
+    <br>
+    <div class="container" style="background-color: beige;">
         <div class="row">
-            <div class="col-md-4" *ngFor = 'let repo of repo'>
+            <div class="col-md-4" *ngFor='let repo of repo' : 5px black;>
                 <div class="card-body">
                     <h5 class="card-tittle"><span id="component">Repo name : &nbsp;</span>
                         {{repo.name}}
@@ -52,7 +55,7 @@
                         <hr>
                         <div class="dec">
                             <span id="component"> Description : &nbsp;</span>
-                        {{repo.description}}
+                            {{repo.description}}
                         </div>
                         <hr>
                         <div class="card-subtitle mb-2">
@@ -67,32 +70,10 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <p class="clearfix"><a class="btn btn-sm btn-warning pull-center" href="{{repo.html_url}}">View this project on github</a></p>
+                    <p class="clearfix"><a class="btn btn-sm btn-warning pull-center" href="{{repo.html_url}}">View this
+                            project on github</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div class="container repositories">
-        <div class="card" *ngFor = 'let repo of repo'>
-            <div class="card-body">
-                <h5 class="card-tittle"><span id="component">Repo name : &nbsp;</span></h5>
-                <div class="card-text">
-                    <hr>
-                    <div class="dec">
-                        <span id="component"> Description : &nbsp;</span>
-                    </div>
-                    <hr>
-                    <div class="card-subtitle mb-2">
-                        <span id="component"> Language used : &nbsp;</span>
-                    </div>
-                    <hr>
-                    <div class="card-subtitle mb-2">
-                        <span id="component"> Created&nbsp; <span id="created"></span> &nbsp; on:</span><br>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <p class="clearfix"><a class="btn btn-sm btn-warning pull-center" href="{{repo.html_url}}">View this project on github</a></p>
-            </div>
-        </div> -->
 </div>
