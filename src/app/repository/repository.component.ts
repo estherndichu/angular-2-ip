@@ -10,7 +10,7 @@ import { Repos } from "../repos";
   styleUrls: ['./repository.component.css']
 })
 export class RepositoryComponent implements OnInit {
-  repo! : Repos;
+  repo:any =[];
   constructor(public repoService : UserServiceService) { }
 
   repoSearch(searchName: string){

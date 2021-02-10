@@ -42,35 +42,5 @@
 <div class="text-center repos">
     <h3>User Repositories</h3>
     <br>
-    <div class="container" repos>
-        <div class="row">
-            <div class="card" *ngFor = 'let repo of repo' id="each">
-                <div class="card-body">
-                    <h5 class="card-tittle"><span id="component">Repo name : &nbsp;</span>
-                        {{repo.name}}
-                    </h5>
-                    <div class="card-text">
-                        <hr>
-                        <div class="dec">
-                            <span id="component"> Description : &nbsp;</span>
-                        {{repo.description}}
-                        </div>
-                        <hr>
-                        <div class="card-subtitle mb-2">
-                            <span id="component"> Language used : &nbsp;</span>
-                            {{repo.language}}
-                        </div>
-                        <hr>
-                        <div class="card-subtitle mb-2">
-                            <span id="component"> Created&nbsp; <span id="created"></span> &nbsp; on:</span><br>
-                            {{repo.created_at}}
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <p class="clearfix"><a class="btn btn-sm btn-warning pull-center" href="{{repo.html_url}}">View this project on github</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <app-repository></app-repository>
 </div>

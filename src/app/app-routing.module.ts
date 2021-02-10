@@ -7,6 +7,7 @@ import { RepositoryComponent } from "./repository/repository.component";
 const routes: Routes = [
   {path: 'user', component:UsersComponent},
   {path:'repos',component:RepositoryComponent},
+  {path:"",redirectTo:'user',pathMatch:'full'}
 ];
 
 @NgModule({
