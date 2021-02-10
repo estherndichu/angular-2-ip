@@ -5,7 +5,7 @@
         <app-user-form (searchOutput)="search($event)"></app-user-form>
     </div>
 </div>
-<div class="container content">
+<div class="container repos">
     <div class="row">
         <div class="col-sm-4">
             <div class="userimg">
@@ -28,11 +28,11 @@
                 </p>
                 <p><i class="fa fa-user-circle" aria-hidden="true" style="font-size:28px"></i> &nbsp;&nbsp; Following :
                     &nbsp;&nbsp;
-                    {{user.following_url}}
+                    {{user.following}}
                 </p>
                 <p><i class="fa fa-user-plus" aria-hidden="true" style="font-size:28px"></i> &nbsp;&nbsp; Followers :
                     &nbsp;&nbsp;
-                    {{user.followers_url}}
+                    {{user.followers}}
                 </p>
                 <p><i class="fa fa-clock-o" aria-hidden="true" style="font-size:28px"></i> &nbsp;&nbsp; Joined on :</p>
             </div>
